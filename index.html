@@ -151,6 +151,123 @@
             margin-left: 5px;
         }
 
+        /* PowerPoint Slide Section Styling */
+        .ppt-section {
+            padding: 20px 5%;
+            margin-top: 20px;
+        }
+
+        .ppt-container {
+            max-width: 900px;
+            margin: auto;
+            position: relative;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .ppt-header {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 12px 20px;
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .ppt-slide-wrapper {
+            position: relative;
+            text-align: center;
+            background-color: #f8f9fa;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ppt-slide {
+            display: none;
+            width: 100%;
+        }
+
+        .ppt-slide.active {
+            display: block;
+        }
+
+        .ppt-slide img {
+            max-width: 100%;
+            max-height: 600px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            object-fit: contain;
+        }
+
+        .ppt-prev, .ppt-next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: auto;
+            padding: 14px 18px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.3s ease;
+            border-radius: 0 4px 4px 0;
+            user-select: none;
+            background-color: rgba(0, 51, 102, 0.7);
+        }
+
+        .ppt-next {
+            right: 0;
+            border-radius: 4px 0 0 4px;
+        }
+
+        .ppt-prev {
+            left: 0;
+        }
+
+        .ppt-prev:hover, .ppt-next:hover {
+            background-color: rgba(0, 51, 102, 0.95);
+        }
+
+        .ppt-controls {
+            text-align: center;
+            padding: 15px;
+            background: #fff;
+            border-top: 1px solid #eee;
+        }
+
+        .ppt-dot {
+            cursor: pointer;
+            height: 12px;
+            width: 12px;
+            margin: 0 4px;
+            background-color: #ccc;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .ppt-dot.active, .ppt-dot:hover {
+            background-color: var(--primary-blue);
+        }
+
+        .ppt-badge {
+            background: var(--accent-gold);
+            color: #000;
+            padding: 3px 8px;
+            font-size: 12px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
         /* Footer */
         footer {
             background: #222;
@@ -205,7 +322,8 @@
 </nav>
 
 <div class="updates-bar">
-    <strong>Updates:</strong> <marquee behavior="scroll" direction="left">Admission Notice-IV for reserve list candidates for MBBS admission at AFMC Pune 2025 (831.29 KB) | Information Brochure for Admission to MBBS Course at AFMC, Pune - 2026</marquee>
+    <strong>Updates:</strong> <marquee behavior="scroll" direction="left">
+Final Merit List Candidates for MBBS admission at AFMC Pune 2025  | Information Brochure for Admission to MBBS Course at AFMC, Pune - 2026  | Flow Chart For MBBS Admission 2026</marquee>
 </div>
 
 <div class="container">
@@ -273,6 +391,116 @@
         </p>
     </div>
 </div>
+
+<!-- PowerPoint Slide Presentation Section -->
+<div class="ppt-section">
+    <div class="ppt-container">
+        <div class="ppt-header">
+            <span>Photo Gallery</span>
+            <span class="ppt-badge" id="slide-indicator">1 of 9</span>
+        </div>
+        <div class="ppt-slide-wrapper">
+            <div class="ppt-slide active">
+                <img src="https://www.image2url.com/r2/default/images/1787521775351-ef052c1c-e1c8-4f06-b3cd-198603a4cb44.jpeg" alt="Slide 1">
+            </div>
+            <div class="ppt-slide">
+                <img src="https://www.image2url.com/r2/default/images/1787521847351-0ae8e6fc-84b8-4a76-b480-a7fd20b29213.jpeg" alt="Slide 2">
+            </div>
+            <div class="ppt-slide">
+                <img src="https://www.image2url.com/r2/default/images/1787521881470-106b4b91-25e2-46f3-9e24-5b4f0974a5f3.jpg" alt="Slide 3">
+            </div>
+            <div class="ppt-slide">
+                <img src="https://www.image2url.com/r2/default/images/1787521924352-e6185ca6-5f13-431d-b894-5919f5eb3895.jpeg" alt="Slide 4">
+            </div>
+            <div class="ppt-slide">
+                <img src="https://www.image2url.com/r2/default/images/1787521948849-86c3f1aa-6deb-458d-a804-70d97d6a534e.jpg" alt="Slide 5">
+            </div>
+            <div class="ppt-slide">
+                <img src="https://www.image2url.com/r2/default/images/1787522058321-07df841c-5b4e-459e-936a-150b7fda5fd0.png" alt="Slide 6">
+            </div>
+            <div class="ppt-slide">
+                <img src="https://www.image2url.com/r2/default/images/1787522083053-228e0396-f4ab-45df-b279-c570bfa9de14.jpg" alt="Slide 7">
+            </div>
+            <div class="ppt-slide">
+                <img src="https://www.image2url.com/r2/default/images/1787522112997-d4ed0197-0f73-40aa-be96-897ff1f5636f.jpeg" alt="Slide 8">
+            </div>
+            <div class="ppt-slide">
+                <img src="https://www.image2url.com/r2/default/images/1787522131193-a64f2fbe-70ca-44c5-9e15-1f888a02aa74.jpg" alt="Slide 9">
+            </div>
+
+            <a class="ppt-prev" onclick="moveSlide(-1)">&#10094;</a>
+            <a class="ppt-next" onclick="moveSlide(1)">&#10095;</a>
+        </div>
+        <div class="ppt-controls">
+            <span class="ppt-dot active" onclick="setSlide(0)"></span>
+            <span class="ppt-dot" onclick="setSlide(1)"></span>
+            <span class="ppt-dot" onclick="setSlide(2)"></span>
+            <span class="ppt-dot" onclick="setSlide(3)"></span>
+            <span class="ppt-dot" onclick="setSlide(4)"></span>
+            <span class="ppt-dot" onclick="setSlide(5)"></span>
+            <span class="ppt-dot" onclick="setSlide(6)"></span>
+            <span class="ppt-dot" onclick="setSlide(7)"></span>
+            <span class="ppt-dot" onclick="setSlide(8)"></span>
+        </div>
+    </div>
+</div>
+
+<script>
+    let currentSlideIndex = 0;
+    const slides = document.querySelectorAll('.ppt-slide');
+    const dots = document.querySelectorAll('.ppt-dot');
+    const indicator = document.getElementById('slide-indicator');
+    const pptContainer = document.querySelector('.ppt-container');
+    let slideTimer = null;
+
+    function showSlide(index) {
+        if (index >= slides.length) currentSlideIndex = 0;
+        else if (index < 0) currentSlideIndex = slides.length - 1;
+        else currentSlideIndex = index;
+
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === currentSlideIndex);
+        });
+
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentSlideIndex);
+        });
+
+        if (indicator) {
+            indicator.textContent = `Slide ${currentSlideIndex + 1} of ${slides.length}`;
+        }
+    }
+
+    function moveSlide(step) {
+        showSlide(currentSlideIndex + step);
+        restartTimer();
+    }
+
+    function setSlide(index) {
+        showSlide(index);
+        restartTimer();
+    }
+
+    function startTimer() {
+        slideTimer = setInterval(() => {
+            showSlide(currentSlideIndex + 1);
+        }, 5000); // 5 seconds interval
+    }
+
+    function restartTimer() {
+        clearInterval(slideTimer);
+        startTimer();
+    }
+
+    // Initialize carousel timer
+    startTimer();
+
+    // Pause timer on hover and resume on leave
+    if (pptContainer) {
+        pptContainer.addEventListener('mouseenter', () => clearInterval(slideTimer));
+        pptContainer.addEventListener('mouseleave', () => startTimer());
+    }
+</script>
 
 <footer>
     <div class="footer-grid">
